@@ -1,0 +1,44 @@
+body {
+  font-family: 'Kameron','Courier New', Courier, Georgia,
+                 Times, "Times New Roman", serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.5em;
+  margin: 1em 0 0.25em;
+}
+
+h2 {
+  color: #BE0908;
+}
+
+a:link {
+  color: #BE0908;
+}
+
+a:visited {
+  color: #9E1A1A;
+}
+
+a:hover {
+  color: #E80001;
+}
+
+a:focus {
+
+}
+
+ul  {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+}
+
+address {
+  display: inline;
+}
