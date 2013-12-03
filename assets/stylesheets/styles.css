@@ -4,12 +4,19 @@
 }
 
 .branding {
-  margin: 0% 2%;
-  padding: 1%;
+  width: 20em;
+  margin: 0 auto;
+  margin-top: 3em;
 }
 
 #logolocation {
   text-align: center;
+}
+
+#message {
+    margin: 0 auto;
+    letter-spacing: 0.05em;
+    width: 17em;
 }
 
 h1 {
@@ -46,9 +53,13 @@ a:hover {
 }
 
 footer {
-    margin: 6% 5%;
+    margin: 3% 5%;
     text-align: center;
 }
+
+.icon-link {
+    padding: 0.8em;
+  }
 
 ul  {
   list-style-type: none;
