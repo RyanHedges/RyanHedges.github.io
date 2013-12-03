@@ -1,6 +1,5 @@
 body {
-  font-family: 'Kameron','Courier New', Courier, Georgia,
-                 Times, "Times New Roman", serif;
+  font-family: 'Kameron','Courier New', Courier, serif;
 }
 
 h1 {
@@ -11,10 +10,12 @@ h1 {
 
 h2 {
   color: #BE0908;
+  letter-spacing: 0.06em;
 }
 
 a:link {
   color: #BE0908;
+
 }
 
 a:visited {
@@ -23,10 +24,6 @@ a:visited {
 
 a:hover {
   color: #E80001;
-}
-
-a:focus {
-
 }
 
 ul  {
