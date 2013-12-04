@@ -1,5 +1,23 @@
-body {
+#content {
   font-family: 'Kameron','Courier New', Courier, serif;
+  margin: 0 3%;
+}
+
+.branding {
+  width: 20em;
+  margin: 0 auto;
+  margin-top: 3em;
+}
+
+#logolocation {
+  text-align: center;
+}
+
+#message {
+    margin: 0 auto;
+    letter-spacing: 0.04em;
+    width: 24em;
+    padding: 0.5em 0 0 1.5em;
 }
 
 h1 {
@@ -11,7 +29,16 @@ h1 {
 h2 {
   color: #BE0908;
   letter-spacing: 0.06em;
+  text-align: center;
+  font-size: 1em;
+  line-height: 0.5em;
+  margin: 0 0 0.6em;
 }
+
+
+#rhlogo {
+    height: 12em;
+  }
 
 a:link {
   color: #BE0908;
@@ -25,6 +52,15 @@ a:visited {
 a:hover {
   color: #E80001;
 }
+
+footer {
+  margin: % 5%;
+  text-align: center;
+}
+
+.icon-link {
+    padding: 0.8em;
+  }
 
 ul  {
   list-style-type: none;

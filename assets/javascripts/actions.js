@@ -12,9 +12,9 @@ var directToRandomLink = {
 var randomize = {
 
   myLinks: new Array(
-    "http://www.instapulse.herokuapp.com/",
+    "http://instapulse.herokuapp.com/",
     "https://github.com/gopher-snakes-2013/Instapulse",
-    "http://www.starwarsracer.herokuapp.com/",
+    "http://starwarsracer.herokuapp.com/",
     "https://github.com/gopher-snakes-2013/orphan_snakes",
     "http://interview-overflow.herokuapp.com/",
     "https://github.com/gopher-snakes-2013/interview-overflow"
