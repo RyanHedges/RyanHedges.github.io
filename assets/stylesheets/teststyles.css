@@ -1,0 +1,105 @@
+body, html {
+  height: 100%;
+}
+
+/*Lets try 1080 grid*/
+/*11 coulumns*/
+/*column: 80px gutter 20px*/
+
+.grid_1 {width: 7.407407407407;} /*80px*/
+.grid_2 {width: 16.666666666667%;}  /*180px*/
+.grid_3 {width: 25.925925925926%;}  /*280px*/
+.grid_4 {width: 35.185185185185%;}  /*380px*/
+.grid_5 {width: 44.444444444444%;}  /*480px*/
+.grid_6 {width: 53.703703703704%;}  /*580px*/
+.grid_7 {width: 62.962962962963%;}  /*680px*/
+.grid_8 {width: 72.222222222222%;}  /*780px*/
+.grid_9 {width: 81.481481481481%;}  /*880px*/
+.grid_10 {width: 90.740740740741%;}  /*980px*/
+.grid_11 {width: 100%;}  /*1080px*/
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11 {
+  margin: 0 20px 20px 0;
+  float: left;
+  display: block;
+  overflow: auto;
+}
+
+.alpha { margin-left: 0px; }
+.omega { margin-right: 0px; }
+
+/* clearfix  --- http://css-tricks.com/snippets/css/clear-fix/ */
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*---------------------------------------------------------*/
+
+/*
+#container {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  background-color: orange;
+  position: relative;
+}
+
+#left {
+  width: 36%;
+  float: left;
+  background-color: red;
+  opacity: 50%;
+  margin: 10% 0 0 0;
+  position: relative;
+  left: 0;
+}
+
+#center {
+  width: 26.8%;
+  margin: 0;
+  float: left;
+  background-color: green;
+  height: 100%;
+  position: fixed;
+  left: 36.6%;
+}
+
+#right {
+  width: 36%;
+  float: right;
+
+  background-color: blue;
+  margin: 10% 0 0 0;
+  position: relative;
+  right: 0;
+}
+
+.project-box {
+  width: 45%;
+  padding-bottom: 45%;
+  margin: 3% 0 0 3%;
+  background-color: gray;
+  float: left;
+  position: relative;
+}
+
+.box-content {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+}*/
+
+/*---------------------------------------------------------*/
