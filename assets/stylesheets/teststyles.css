@@ -47,6 +47,61 @@ body, html {
 
 /*---------------------------------------------------------*/
 
+#container {
+  width: 95%;
+  height: 100%;
+  margin: auto;
+  background-color: lightblue;
+  position: relative;
+}
+
+#main-info {
+  background-color: gray;
+  float: left;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+#proj-one {
+  width: 100%;
+  float: left;
+  background-color: lightgreen;
+  position: relative;
+  top: 115px;
+}
+
+#proj-two {
+  width: 100%;
+  float: left;
+  background-color: orange;
+  position: relative;
+  top: 106px;
+}
+
+.project-box {
+  width: 70%;
+  padding-bottom: 70%;
+  margin: 10px auto;
+  background-color: lightgray;
+  position: relative;
+}
+
+.box-content {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+}
+
+.content-description {
+  width: 90%;
+  margin: auto;
+  background-color: red;
+  padding: 2%;
+}
+
 /*
 #container {
   width: 90%;
@@ -56,7 +111,7 @@ body, html {
   position: relative;
 }
 
-#left {
+#proj-one {
   width: 36%;
   float: left;
   background-color: red;
@@ -66,7 +121,7 @@ body, html {
   left: 0;
 }
 
-#center {
+#main-info {
   width: 26.8%;
   margin: 0;
   float: left;
@@ -76,7 +131,7 @@ body, html {
   left: 36.6%;
 }
 
-#right {
+#proj-two {
   width: 36%;
   float: right;
 
