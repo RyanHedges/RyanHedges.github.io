@@ -1,6 +1,6 @@
 @media only screen and (max-width : 480px) {
 
-  .branding {
+/*  .branding {
     margin-top: 0.5em;
     width: 15em;
   }
@@ -31,11 +31,6 @@
     padding-left: 0;
   }
 
-  p {
-    font-size: 0.85em;
-    text-align: left;
-  }
-
   footer {
     margin: 5% 5% 0;
     text-align: center;
@@ -43,5 +38,5 @@
 
   .icon-link {
     padding: 0.8em;
-  }
+  }*/
 }

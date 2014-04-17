@@ -56,7 +56,7 @@ body, html {
 }
 
 #main-info {
-  background-color: gray;
+  background-color: white;
   float: left;
   position: absolute;
   width: 100%;
@@ -68,7 +68,7 @@ body, html {
   float: left;
   background-color: lightgreen;
   position: relative;
-  top: 115px;
+  top: 275px;
 }
 
 #proj-two {
@@ -76,7 +76,7 @@ body, html {
   float: left;
   background-color: orange;
   position: relative;
-  top: 106px;
+  top: 266px;
 }
 
 .project-box {
@@ -100,6 +100,12 @@ body, html {
   margin: auto;
   background-color: red;
   padding: 2%;
+}
+
+.profile-pic {
+  width: 25%;
+  float: left;
+  margin: 3%;
 }
 
 /*
