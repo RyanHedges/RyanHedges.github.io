@@ -5,37 +5,26 @@
   <link rel="stylesheet" type="text/css" href="assets/stylesheets/normal.css">
   <link rel="stylesheet" href="assets/stylesheets/font-awesome-4.0.3/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="assets/stylesheets/styles.css">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/layout.css" media='screen'>
   <link rel="stylesheet" type="text/css" href="assets/stylesheets/rwd.css">
   <link href='http://fonts.googleapis.com/css?family=Kameron:400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="assets/stylesheets/layout.css" media='screen'>
 </head>
 
 <body>
   <div id='container'>
-    <div id='proj-one'>
-      <div class='project-box'>
-        <div class='box-content'>
-          PROJ-ONE hello there I am testing to see what happens to this dive as I write a bunch of content. hello there I am testing to see what happens to this dive as I write a bunch of content.
-        </div>
-      </div>
-      <div class='content-description'>
-        Here is information about the above square. it doesn't always need to be there.
-      </div>
-      <div class='project-box'></div>
-      <div class='project-box'></div>
-    </div>
     <div id='main-info'>
-      <h2>My name is Ryan Hedges</h2>
-      <img class='profile-pic' src="assets/images/rhedgesbody.png">
+      <h2 id='greeting'>My name is Ryan Hedges</h2>
+      <img id='profile-pic' src="assets/images/rhedgesbody.png">
       <div class='message'>
         <p>I love making things. Applications, music, and big ideas!</p>
         <p>Please check out some of the projects I've made and let me know what you think by <a href="mailto:ryan@ryanhedges.com">sending me an email</a>.</p>
-        <p>It's a nice day to develop something awesome.</p>
+        <p>It's a nice day to write some code.</p>
       
         <nav>
           <ul>
             <li>
               <a class="icon-link"href="http://www.linkedin.com/in/ryanhedges/" title="Ryan Hedges' Linked In Profile"><i class="fa fa-linkedin-square fa-2x"></i></a>
+             
             </li>
             <li>
               <a class="icon-link" href="https://github.com/RyanHedges" title="Ryan Hedges' Git Hub Profile"><i class="fa fa-github fa-2x"></i></a>
@@ -53,15 +42,40 @@
       </div>
     </div>
 
+    <div id='proj-one'>
+      <div class='project-box'>
+        <a href="#">
+            <div class='box-content'>
+              <img src="assets/images/instapulse.png">
+            </div>
+        </a>
+      </div>
+      <div class='content-description'>
+        <em>InstaPulse</em> is a mapping app that allows you to discover trends via Instagram photos over time and space in San Francisco.
+      </div>
+      <div class='project-box'>
+        <a href="#">
+            <div class='box-content'>
+              <img src="assets/images/instapulse.png">
+            </div>
+        </a>
+      </div>
+      <div class='content-description'>
+        <em>InstaPulse</em> is a mapping app that allows you to discover trends via Instagram photos over time and space in San Francisco.
+      </div>
+    </div>
+
     <div id='proj-two'>
       <div class='project-box'>
-        <div class='box-content'>
-          PROJ-TWO hello there I am testing to see what happens to this dive as I write a bunch of content. hello there I am testing to see what happens to this dive as I write a bunch of content.
-        </div>
+        <a href="#">
+          <div class='box-content'>
+            <img src="assets/images/codereviewplease.png">
+          </div>
+        </a>
       </div>
-      <div class='project-box'></div>
-      <div class='project-box'></div>
-      <div class='project-box group'></div>
+      <div class='content-description'>
+        <em>Code Review, Please</em> allows users to ask for code review of their github gists. Made during a 24 hour hackathon.
+      </div>
     </div>
   </div>
 </body>

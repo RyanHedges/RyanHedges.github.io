@@ -2,81 +2,23 @@ body, html {
   height: 100%;
 }
 
-/*Lets try 1080 grid*/
-/*11 coulumns*/
-/*column: 80px gutter 20px*/
-
-.grid_1 {width: 7.407407407407;} /*80px*/
-.grid_2 {width: 16.666666666667%;}  /*180px*/
-.grid_3 {width: 25.925925925926%;}  /*280px*/
-.grid_4 {width: 35.185185185185%;}  /*380px*/
-.grid_5 {width: 44.444444444444%;}  /*480px*/
-.grid_6 {width: 53.703703703704%;}  /*580px*/
-.grid_7 {width: 62.962962962963%;}  /*680px*/
-.grid_8 {width: 72.222222222222%;}  /*780px*/
-.grid_9 {width: 81.481481481481%;}  /*880px*/
-.grid_10 {width: 90.740740740741%;}  /*980px*/
-.grid_11 {width: 100%;}  /*1080px*/
-
-.grid_1,
-.grid_2,
-.grid_3,
-.grid_4,
-.grid_5,
-.grid_6,
-.grid_7,
-.grid_8,
-.grid_9,
-.grid_10,
-.grid_11 {
-  margin: 0 20px 20px 0;
-  float: left;
-  display: block;
-  overflow: auto;
-}
-
-.alpha { margin-left: 0px; }
-.omega { margin-right: 0px; }
-
-/* clearfix  --- http://css-tricks.com/snippets/css/clear-fix/ */
-.group:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/*---------------------------------------------------------*/
-
 #container {
   width: 95%;
-  height: 100%;
-  margin: auto;
-  background-color: lightblue;
-  position: relative;
+  margin: 0 auto 4%;
 }
 
 #main-info {
-  background-color: white;
-  float: left;
-  position: absolute;
   width: 100%;
-  top: 0;
+  overflow: hidden;
 }
 
 #proj-one {
   width: 100%;
-  float: left;
-  background-color: lightgreen;
-  position: relative;
-  top: 275px;
 }
 
 #proj-two {
   width: 100%;
-  float: left;
-  background-color: orange;
-  position: relative;
-  top: 266px;
+  clear: both;
 }
 
 .project-box {
@@ -96,13 +38,12 @@ body, html {
 }
 
 .content-description {
-  width: 90%;
+  width: 68%;
   margin: auto;
-  background-color: red;
   padding: 2%;
 }
 
-.profile-pic {
+#profile-pic {
   width: 25%;
   float: left;
   margin: 3%;

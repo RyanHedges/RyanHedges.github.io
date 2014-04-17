@@ -1,42 +1,47 @@
-@media only screen and (max-width : 480px) {
-
-/*  .branding {
-    margin-top: 0.5em;
-    width: 15em;
+@media only screen and (min-width : 460px) {
+  body {
+    font-size: 0.9em;
+  }
+  #container {
+    position: relative;
   }
 
-  #logolocation {
-    position: static;
-    margin: 0 auto;
-    padding-top: 10%;
-    padding-left: 0em;
-    width: 25%;
-  }
-
-  #rhlogo {
-    height: 10em;
-  }
-
-  h1 {
-    text-align: center;
-    font-size: 1.5em;
-    margin: 0.50em 0 0.25em;
-  }
-
-  #message {
-    margin: 6% 10% auto;
-    letter-spacing: 0.05em;
-    width: 85%;
-    margin-bottom: 8%;
-    padding-left: 0;
-  }
-
-  footer {
-    margin: 5% 5% 0;
-    text-align: center;
+  .message {
+    float: left;
+    margin: 5% auto 0;
+    max-width: 61%;
   }
 
   .icon-link {
-    padding: 0.8em;
-  }*/
+    padding: 1em 0.6em;
+  }
+
+  #proj-one {
+    width: 49.5%;
+    position: absolute;
+    top: 105%;
+    left: 0;
+  }
+
+  #proj-two {
+    width: 49.5%;
+    position: absolute;
+    top: 105%;
+    right: 0;
+  }
+}
+
+@media only screen and (min-width: 715px) {
+
+  #container{
+    background-color: red;
+  }
+
+  #
+  
+  .message {
+    clear: both;
+    max-width: 40%;
+  }
+
 }

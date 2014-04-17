@@ -1,6 +1,6 @@
 body {
   font-family: 'Kameron','Courier New', Courier, serif;
-  font-size: 0.75em;
+  font-size: 0.8em;
 }
 
 .branding {
@@ -55,7 +55,7 @@ nav {
 }
 
 .icon-link {
-    padding: 1em 0.8em;
+    padding: 1em 0.7em;
     font-size: 1.45em;
   }
 
@@ -70,5 +70,13 @@ li {
 }
 
 address {
+  display: inline;
+}
+
+.box-content img {
+   width: 100%;
+}
+
+.link-title {
   display: inline;
 }
