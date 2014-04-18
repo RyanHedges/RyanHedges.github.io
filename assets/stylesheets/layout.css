@@ -48,6 +48,10 @@ body, html {
   margin: 3%;
 }
 
+.project-container{
+  height: 28em;
+}
+
 /*
 #container {
   width: 90%;
