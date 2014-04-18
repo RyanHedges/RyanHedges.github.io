@@ -37,11 +37,62 @@
     background-color: red;
   }
 
-  #
-  
+  #main-info {
+    /*background-color: orange;*/
+    position: fixed;
+    top: 0;
+    left: 5px;
+    bottom: 0;
+    width: 41%;
+  }
+
+  #profile-pic {
+    float: none;
+    margin: 0 30%;
+    width: 37%;
+  }
+
+  #greeting {
+    font-size: 1.4em;
+  }
+
   .message {
     clear: both;
-    max-width: 40%;
+    max-width: 100%;
+  }
+
+  #proj-one {
+    position: static;
+    float: right;
+    width: 59%;
+    margin-top: 4%;
+  }
+
+  #proj-two {
+    position: static;
+    float: right;
+    width: 59%;
   }
 
 }
+
+@media only screen and (min-width: 800px) {
+  #container {
+    margin: 0;
+  }
+
+  #proj-one {
+    position: absolute;
+    left: 41%;
+    width: 33%;
+  }
+
+  #proj-two {
+    position: absolute;
+    right: -20px;
+    width: 33%;
+    margin-top: 4%;
+  }
+}
+
+
