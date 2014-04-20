@@ -1,5 +1,5 @@
 @media only screen and (min-width : 460px) {
-  body {
+  /*body {
     font-size: 0.9em;
   }
 
@@ -20,24 +20,34 @@
 
   .project-container {
     height: 22em;
+  }*/
+
+  #projects {
   }
 
-  #proj-one {
-    width: 49.5%;
-    position: absolute;
-    top: 105%;
-    left: 0;
+  .project-container {
+    float: left;
+    width: 50%;
+    padding-bottom: 9%;
+    background-color: white;
   }
 
-  #proj-two {
-    width: 49.5%;
-    position: absolute;
-    top: 105%;
-    right: 0;
+  .project-box {
+    width: 90%;
+    padding-bottom: 90%;
+  }
+
+  .content-description {
+    width: 85%;
+    height: 2em;
+  }
+
+  .github-link {
+    margin-left: -16%;
   }
 }
 
-@media only screen and (min-width: 715px) {
+/*@media only screen and (min-width: 715px) {
 
   #container{
   }
@@ -155,6 +165,6 @@
   .content-description {
     width: 85%;
   }
-}
+}*/
 
 
