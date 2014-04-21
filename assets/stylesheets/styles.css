@@ -1,16 +1,8 @@
 body {
   font-family: 'Kameron','Courier New', Courier, serif;
   font-size: 0.8em;
-}
-
-.branding {
-  width: 20em;
-  margin: 0 auto;
-  margin-top: 3em;
-}
-
-#logolocation {
-  text-align: center;
+  background: #fcfcfc;
+  color: #474747;
 }
 
 .message {
@@ -21,24 +13,27 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 1.5em;
-  margin: 1em 0 0.25em;
+  margin: 0;
 }
 
 h2 {
   color: #BE0908;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   text-align: center;
+  margin: 0.05em;
+  font-size: 1.2em;
 }
 
+p {
+  margin-top: 0;
+}
 
-#rhlogo {
-    height: 12em;
-  }
+a {
+  text-decoration: none;
+}
 
 a:link {
   color: #BE0908;
-
 }
 
 a:visited {
@@ -50,18 +45,22 @@ a:hover {
 }
 
 nav {
-  margin: % 5%;
+  margin: 10% 0;
   text-align: center;
 }
 
 .icon-link {
-    padding: 1em 0.7em;
-    font-size: 1.45em;
-  }
+  padding: 0 3.25%;
+  font-size: 1.45em;
+}
+
+.omega {
+  margin-right: 0;
+  padding-right: 0;
+}
 
 ul  {
   list-style-type: none;
-  margin: 2em 0 0 0;
   padding: 0;
 }
 
