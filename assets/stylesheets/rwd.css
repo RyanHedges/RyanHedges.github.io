@@ -1,34 +1,9 @@
 @media only screen and (min-width : 460px) {
-  /*body {
-    font-size: 0.9em;
-  }
-
-  #container {
-    position: relative;
-    top: 0;
-  }
-
-  .message {
-    float: left;
-    margin: 5% auto 0;
-    max-width: 61%;
-  }
-
-  .icon-link {
-    padding: 1em 0.5em;
-  }
-
-  .project-container {
-    height: 22em;
-  }*/
-
-  #projects {
-  }
 
   .project-container {
     float: left;
     width: 50%;
-    padding-bottom: 9%;
+    padding-bottom: 18%;
     background-color: white;
   }
 
@@ -43,128 +18,51 @@
   }
 
   .github-link {
-    margin-left: -16%;
+    right: 8%;
+    bottom: 3%;
   }
+
+  .foot-links {
+    margin: 1em;
+  }
+
 }
 
-/*@media only screen and (min-width: 715px) {
-
-  #container{
+@media only screen and (min-width: 540px) {
+  
+  #container {
+    max-width: 540px;
   }
 
   #main-info {
-    position: fixed;
-    top: 0;
-    left: 5px;
-    bottom: 0;
-    width: 41%;
+    max-width: 540px;
   }
 
   #profile-pic {
-    float: none;
-    margin: 0 30%;
-    width: 37%;
-  }
-
-  #greeting {
-    font-size: 1.4em;
-  }
-
-  .message {
-    clear: both;
-    max-width: 100%;
     margin-top: 0;
   }
 
-  .project-container{
-    height: 27em;
-  }
-
-  #proj-one {
-    position: static;
-    float: right;
-    width: 59%;
-    margin-top: 4%;
-  }
-
-  #proj-two {
-    position: static;
-    float: right;
-    width: 59%;
-    clear: none;
-  }
-
-}
-
-@media only screen and (min-width: 800px) {
-
-  #container{
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  #main-info {
-    left: 30%;
-  }
-
   .message {
-    padding: 0 30px;
+    margin: 0 6% 0 32%;
   }
 
-  #proj-one {
-    float: left;
-    width: 34%;
-    margin-top: 31.5%;
-  }
-
-  #proj-two {
-    margin-top: 31.5%;
-    width: 34%;
-    float: right;
-  }
-
-  .project-container {
-    height: 23em;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  
-  #container {
-    margin: 0 auto;
-    max-width: 1180px;
-  }
-
-  #main-info {
-    width: 350px;
-    left: 50.5%;
-    margin-left: -175px;
-  }
-
-  #proj-one {
-    width: 36%;
-    margin-top: 304px;
-  }
-
-  #proj-two {
-    width: 36%;
-    margin-top: 304px;
-  }
-
-  .project-container {
-    width: 50%;
-    float: left;
+  #projects {
+    max-width: 540px;
+    padding-top: 2%;
+    margin-top: 70%
   }
 
   .project-box {
-    width: 90%;
-    padding-bottom: 90%;
+    width: 80%;
+    padding-bottom: 80%;
   }
 
   .content-description {
-    width: 85%;
+    width: 76%;
   }
-}*/
 
+  .github-link {
+    right: 12%;
+  }
 
+}
