@@ -27,7 +27,7 @@ body, html {
   background-color: white;
   position: relative;
   z-index: 5;
-  margin-top: 25em;
+  margin-top: 75%;
   height: 100%;
   padding-top: 9%;
 }
@@ -37,10 +37,6 @@ body, html {
 }
 
 .github-link {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin-left: -12%;
 }
 
 .project-box {

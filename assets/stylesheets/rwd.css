@@ -28,7 +28,7 @@
   .project-container {
     float: left;
     width: 50%;
-    padding-bottom: 9%;
+    padding-bottom: 18%;
     background-color: white;
   }
 
@@ -43,12 +43,11 @@
   }
 
   .github-link {
-    margin-left: -16%;
   }
 }
 
-/*@media only screen and (min-width: 715px) {
-
+@media only screen and (min-width: 615px) {
+/*
   #container{
   }
 
@@ -92,7 +91,7 @@
     float: right;
     width: 59%;
     clear: none;
-  }
+  }*/
 
 }
 
@@ -165,6 +164,6 @@
   .content-description {
     width: 85%;
   }
-}*/
+}
 
 
