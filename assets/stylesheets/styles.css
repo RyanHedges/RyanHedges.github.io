@@ -1,6 +1,8 @@
 body {
   font-family: 'Kameron','Courier New', Courier, serif;
   font-size: 0.8em;
+  background: #fcfcfc;
+  color: #474747;
 }
 
 .message {
@@ -20,6 +22,14 @@ h2 {
   text-align: center;
   margin: 0.05em;
   font-size: 1.2em;
+}
+
+p {
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 a:link {

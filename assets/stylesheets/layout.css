@@ -18,13 +18,19 @@ body, html {
   overflow: hidden;
 }
 
+#profile-pic {
+  width: 28%;
+  float: left;
+  margin: 3% 3% 3% 0;
+}
+
 #title-nav {
   float: left;
   width: 66%;
 }
 
 #projects {
-  background-color: white;
+  background-color: #fcfcfc;
   position: relative;
   z-index: 5;
   margin-top: 75%;
@@ -34,9 +40,13 @@ body, html {
 
 .project-container {
   position: relative;
+  background-color: #fcfcfc;
 }
 
 .github-link {
+  position: absolute;
+  bottom: 0;
+  right: 19%;
 }
 
 .project-box {
@@ -60,8 +70,13 @@ body, html {
   padding: 3% 3% 6% 3%;
 }
 
-#profile-pic {
-  width: 28%;
-  float: left;
-  margin: 3% 3% 3% 0;
+footer {
+  text-align: center;
+  margin: 7% 0 15%;
+  clear: both;
 }
+
+.foot-links {
+  margin: 0.5em;
+}
+
