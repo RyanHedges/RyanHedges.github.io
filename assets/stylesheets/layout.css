@@ -36,6 +36,7 @@ body, html {
   margin-top: 93%;
   height: 100%;
   padding-top: 3%;
+  overflow: hidden;
 }
 
 .project-container {

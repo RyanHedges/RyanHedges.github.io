@@ -7,6 +7,10 @@
     background-color: white;
   }
 
+  #projects {
+    margin-top: 75%;
+  }
+
   .project-box {
     width: 90%;
     padding-bottom: 90%;
