@@ -44,7 +44,19 @@
     </div>
 
     <div id='projects'>
-      <div class='project-container'>
+    <% data.projects.details.each do |project| %>
+    <%= partial(:portfolio_item,
+                  :locals => {
+                    project_link: project.project_link,
+                    image: project.image_path,
+                    description: project.description,
+                    github_link: project.github_link
+                    }) %>
+    <% end %>
+
+
+
+      <!-- <div class='project-container'>
         <div class='project-box'>
           <a href="http://instapulse.herokuapp.com/">
               <div class='box-content'>
@@ -55,7 +67,7 @@
         <div class='content-description'>
           <p><em>InstaPulse</em> is a mapping app that allows you to discover trends via Instagram photos over time and space in San Francisco.</p>
           <div class='github-link'>
-            <p><a href="https://github.com/SamSamskies/codereviewplease">[ Code on Github ]</a></p>
+            <p><a href="https://github.com/gopher-snakes-2013/Instapulse">[ Code on Github ]</a></p>
           </div>
         </div>
       </div>
@@ -70,7 +82,7 @@
         <div class='content-description'>
           <p><em>Code Review, Please</em> allows users to request code reviews from other users for their github gists. Created during a 24 hour hackathon.</p>
           <div class='github-link'>
-            <p><a href="https://github.com/gopher-snakes-2013/Instapulse">[ Code on Github ]</a></p>
+            <p><a href="https://github.com/SamSamskies/codereviewplease">[ Code on Github ]</a></p>
           </div>
         </div>
       </div>
@@ -97,7 +109,7 @@
         <div class='content-description'>
           <p><em>Millpond Films</em> logo design</p>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <footer>

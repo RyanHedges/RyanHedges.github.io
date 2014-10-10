@@ -1,0 +1,19 @@
+details:
+  - project_link : "http://instapulse.herokuapp.com/"
+    image_path   : "assets/images/instapulse.png"
+    description  : <em>InstaPulse</em> is a mapping app that allows you to discover trends via Instagram photos over time and space in San Francisco.
+    github_link  :
+      - link :  "https://github.com/SamSamskies/codereviewplease"
+        text :  [ Code on Github ]
+  - project_link:
+    image_path:
+    description:
+    github_link:
+  - project_link:
+    image_path:
+    description:
+    github_link:
+  - project_link:
+    image_path:
+    description:
+    github_link:
