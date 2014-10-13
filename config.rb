@@ -85,8 +85,8 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 activate :deploy do |deploy|
-  deployt.method = :git
-  deployt.branch = 'master'
+  deploy.method = :git
+  deploy.branch = 'master'
   deploy.commit_message = 'initial build for middleman conversion'
 end
 
