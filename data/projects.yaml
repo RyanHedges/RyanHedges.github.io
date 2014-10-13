@@ -1,19 +1,33 @@
 details:
-  - project_link : "http://instapulse.herokuapp.com/"
-    image_path   : "assets/images/instapulse.png"
-    description  : <em>InstaPulse</em> is a mapping app that allows you to discover trends via Instagram photos over time and space in San Francisco.
+  - project_link :  "http://instapulse.herokuapp.com/"
+    image_path   :
+      name: "instapulse.png"
+      css :
+    description  :  "234<em>InstaPulse</em> is a mapping app that allows you to discover trends via Instagram photos over time and space in San Francisco."
     github_link  :
-      - link :  "https://github.com/SamSamskies/codereviewplease"
-        text :  [ Code on Github ]
-  - project_link:
-    image_path:
-    description:
-    github_link:
-  - project_link:
-    image_path:
-    description:
-    github_link:
-  - project_link:
-    image_path:
-    description:
-    github_link:
+      link :  "https://github.com/gopher-snakes-2013/Instapulse"
+      text :  "[ Code on Github ]"
+  - project_link :  "http://codereviewplease.herokuapp.com/"
+    image_path   :
+      name:  "codereviewplease.png"
+      css :
+    description  :  "<em>Code Review, Please</em> allows users to request code reviews from other users for their github gists. Created during a 24 hour hackathon."
+    github_link  :
+      link :  "https://github.com/SamSamskies/codereviewplease"
+      text :  "[ Code on Github ]"
+  - project_link :  "http://www.youtube.com/user/CuttingCornersProd"
+    image_path   :
+      name:  "cuttingcorners.png"
+      css :
+    description  :  "<em>Cutting Corners Productions</em> logo design"
+    github_link  :
+      link :
+      text :
+  - project_link :  "https://twitter.com/millpondfilms"
+    image_path   :
+      name:  "Millpond.png"
+      css : "style='border:1px solid #474747'"
+    description  :  "<em>Millpond Films</em> logo design</p>"
+    github_link  :
+      link :
+      text :

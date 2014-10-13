@@ -1,49 +1,36 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link href='http://fonts.googleapis.com/css?family=Kameron:400,700' rel='stylesheet' type='text/css'>
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  <%= stylesheet_link_tag "all" %>
-</head>
-
-<body>
-  <div id='container'>
-
-    <div id='main-info'>
-      <img id='profile-pic' src="assets/images/rhedgesbody.png">
-        <div id='title-nav'>
-        <h1 id="my-name">Ryan Hedges</h1>
-        <h2 class="titles">[ web developer ]</h2>
-        <h2 class="titles">[ graphic designer ]</h2>
-        <nav>
-          <ul>
-            <li>
-              <a class="icon-link"href="http://www.linkedin.com/in/ryanhedges/" title="Ryan Hedges' Linked In Profile"><i class="fa fa-linkedin-square fa-2x"></i></a>
-            </li>
-            <li>
-              <a class="icon-link" href="https://github.com/RyanHedges" title="Ryan Hedges' Git Hub Profile"><i class="fa fa-github fa-2x"></i></a>
-            </li>
-            <li>
-              <a class="icon-link" href="https://twitter.com/ryan_hedges" title="Ryan Hedges' Curriculum Vitae"><i class="fa fa-twitter fa-2x"></i></a>
-            </li>
-            <li>
-              <address>
-                <a class="icon-link" href="mailto:ryan@ryanhedges.com" title="Email Me at Ryan@ryanhedges.com"><i class="fa fa-envelope fa-2x"></i></a>
-              </address>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class='message'>
-        <p>Please check out the projects I've made and let me know what you think by sending me an <a href="mailto:ryan@ryanhedges.com">email</a>.</p>
-        <p>Also take a gander at my <a href="rhcvweb.pdf">resume</a></p>
-      </div>
+<div id='container'>
+  <div id='main-info'>
+  <%= image_tag "rhedgesbody.png", id: "profile-pic" %>
+      <div id='title-nav'>
+      <h1 id="my-name">Ryan Hedges</h1>
+      <h2 class="titles">[ web developer ]</h2>
+      <h2 class="titles">[ graphic designer ]</h2>
+      <nav>
+        <ul>
+          <li>
+            <a class="icon-link"href="http://www.linkedin.com/in/ryanhedges/" title="Ryan Hedges' Linked In Profile"><i class="fa fa-linkedin-square fa-2x"></i></a>
+          </li>
+          <li>
+            <a class="icon-link" href="https://github.com/RyanHedges" title="Ryan Hedges' Git Hub Profile"><i class="fa fa-github fa-2x"></i></a>
+          </li>
+          <li>
+            <a class="icon-link" href="https://twitter.com/ryan_hedges" title="Ryan Hedges' Curriculum Vitae"><i class="fa fa-twitter fa-2x"></i></a>
+          </li>
+          <li>
+            <address>
+              <a class="icon-link" href="mailto:ryan@ryanhedges.com" title="Email Me at Ryan@ryanhedges.com"><i class="fa fa-envelope fa-2x"></i></a>
+            </address>
+          </li>
+        </ul>
+      </nav>
     </div>
+    <div class='message'>
+      <p>Please check out the projects I've made and let me know what you think by sending me an <a href="mailto:ryan@ryanhedges.com">email</a>.</p>
+      <p>Also take a gander at my <a href="rhcvweb.pdf">resume</a></p>
+    </div>
+  </div>
 
-    <div id='projects'>
+  <div id='projects'>
     <% data.projects.details.each do |project| %>
     <%= partial(:portfolio_item,
                   :locals => {
@@ -53,89 +40,5 @@
                     github_link: project.github_link
                     }) %>
     <% end %>
-
-
-
-      <!-- <div class='project-container'>
-        <div class='project-box'>
-          <a href="http://instapulse.herokuapp.com/">
-              <div class='box-content'>
-                <img src="assets/images/instapulse.png">
-              </div>
-          </a>
-        </div>
-        <div class='content-description'>
-          <p><em>InstaPulse</em> is a mapping app that allows you to discover trends via Instagram photos over time and space in San Francisco.</p>
-          <div class='github-link'>
-            <p><a href="https://github.com/gopher-snakes-2013/Instapulse">[ Code on Github ]</a></p>
-          </div>
-        </div>
-      </div>
-      <div class='project-container'>
-        <div class='project-box'>
-          <a href="http://codereviewplease.herokuapp.com/">
-            <div class='box-content'>
-              <img src="assets/images/codereviewplease.png">
-            </div>
-          </a>
-        </div>
-        <div class='content-description'>
-          <p><em>Code Review, Please</em> allows users to request code reviews from other users for their github gists. Created during a 24 hour hackathon.</p>
-          <div class='github-link'>
-            <p><a href="https://github.com/SamSamskies/codereviewplease">[ Code on Github ]</a></p>
-          </div>
-        </div>
-      </div>
-      <div class='project-container'>
-        <div class='project-box'>
-          <a href="http://www.youtube.com/user/CuttingCornersProd">
-            <div class='box-content'>
-              <img src="assets/images/cuttingcorners.png">
-            </div>
-          </a>
-        </div>
-        <div class='content-description'>
-          <p><em>Cutting Corners Productions</em> logo design</p>
-        </div>
-      </div>
-      <div class='project-container'>
-        <div class='project-box'>
-          <a href="https://twitter.com/millpondfilms">
-            <div class='box-content' style='border:1px solid #474747'>
-              <img src="assets/images/Millpond.png">
-            </div>
-          </a>
-        </div>
-        <div class='content-description'>
-          <p><em>Millpond Films</em> logo design</p>
-        </div>
-      </div> -->
-    </div>
-
-    <footer>
-        <ul>
-          <li class='foot-links'>
-              <a href="http://www.linkedin.com/in/ryanhedges/" title="Ryan Hedges' Linked In Profile">LinkedIn</a>
-            </li>
-            <li class='foot-links'>
-              <a href="https://github.com/RyanHedges" title="Ryan Hedges' Git Hub Profile">GitHub</a>
-            </li>
-            <li class='foot-links'>
-              <a href="https://twitter.com/ryan_hedges" title="Ryan Hedges on twitter">Twitter</a>
-            </li>
-            <li class='foot-links'>
-              <a href="rhcvweb.pdf">Resume</a>
-            </li>
-            <li class='foot-links'>
-              <address>
-                <a href="mailto:ryan@ryanhedges.com" title="Email Me at Ryan@ryanhedges.com"> Contact</a>
-              </address>
-            </li>
-        </ul>
-      </footer>
-
-
   </div>
-</body>
-
-</html>
+</div>

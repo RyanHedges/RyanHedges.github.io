@@ -3,7 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Blog Title<%= ' - ' + current_article.title unless current_article.nil? %></title>
+    <link href='http://fonts.googleapis.com/css?family=Kameron:400,700' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <%= stylesheet_link_tag "all" %>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
   </head>
   <body>
@@ -12,27 +16,26 @@
       <%= yield %>
     </div>
     
-    <aside>
-      <h2>Recent Articles</h2>
-      <ol>
-        <% blog.articles[0...10].each do |article| %>
-          <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
-        <% end %>
-      </ol>
-
-      <h2>Tags</h2>
-      <ol>
-        <% blog.tags.each do |tag, articles| %>
-          <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
-        <% end %>
-      </ol>
-
-      <h2>By Year</h2>
-      <ol>
-        <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
-          <li><%= link_to "#{year} (#{articles.size})", blog_year_path(year) %></li>
-        <% end %>
-      </ol>
-    </aside>
+    <footer>
+      <ul>
+        <li class='foot-links'>
+            <a href="http://www.linkedin.com/in/ryanhedges/" title="Ryan Hedges' Linked In Profile">LinkedIn</a>
+          </li>
+          <li class='foot-links'>
+            <a href="https://github.com/RyanHedges" title="Ryan Hedges' Git Hub Profile">GitHub</a>
+          </li>
+          <li class='foot-links'>
+            <a href="https://twitter.com/ryan_hedges" title="Ryan Hedges on twitter">Twitter</a>
+          </li>
+          <li class='foot-links'>
+            <a href="rhcvweb.pdf">Resume</a>
+          </li>
+          <li class='foot-links'>
+            <address>
+              <a href="mailto:ryan@ryanhedges.com" title="Email Me at Ryan@ryanhedges.com"> Contact</a>
+            </address>
+          </li>
+      </ul>
+    </footer>
   </body>
 </html>
