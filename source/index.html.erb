@@ -1,24 +1,45 @@
----
-pageable: true
-per_page: 10
----
-<% if paginate && num_pages > 1 %>
-  <p>Page <%= page_number %> of <%= num_pages %></p>
+<div id='container'>
+  <div id='main-info'>
+  <%= image_tag "rhedgesbody.png", id: "profile-pic" %>
+      <div id='title-nav'>
+      <h1 id="my-name">Ryan Hedges</h1>
+      <h2 class="titles">[ web developer ]</h2>
+      <h2 class="titles">[ graphic designer ]</h2>
+      <nav>
+        <ul>
+          <li>
+            <a class="icon-link"href="http://www.linkedin.com/in/ryanhedges/" title="Ryan Hedges' Linked In Profile"><i class="fa fa-linkedin-square fa-2x"></i></a>
+          </li>
+          <li>
+            <a class="icon-link" href="https://github.com/RyanHedges" title="Ryan Hedges' Git Hub Profile"><i class="fa fa-github fa-2x"></i></a>
+          </li>
+          <li>
+            <a class="icon-link" href="https://twitter.com/ryan_hedges" title="Ryan Hedges' Curriculum Vitae"><i class="fa fa-twitter fa-2x"></i></a>
+          </li>
+          <li>
+            <address>
+              <a class="icon-link" href="mailto:ryan@ryanhedges.com" title="Email Me at Ryan@ryanhedges.com"><i class="fa fa-envelope fa-2x"></i></a>
+            </address>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class='message'>
+      <p>Please check out the projects I've made and let me know what you think by sending me an <a href="mailto:ryan@ryanhedges.com">email</a>.</p>
+      <p>Also take a gander at my <a href="rhcvweb.pdf">resume</a></p>
+    </div>
+  </div>
 
-  <% if prev_page %>
-    <p><%= link_to 'Previous page', prev_page %></p>
-  <% end %>
-<% end %>
-
-<% page_articles.each_with_index do |article, i| %>
-  <h2><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h2>
-  <!-- use article.summary(250) if you have Nokogiri available to show just
-       the first 250 characters -->
-  <%= article.body %>
-<% end %>
-
-<% if paginate %>
-  <% if next_page %>
-    <p><%= link_to 'Next page', next_page %></p>
-  <% end %>
-<% end %>
+  <div id='projects'>
+    <% data.projects.details.each do |project| %>
+    <%= partial(:portfolio_item,
+                  :locals => {
+                    project_link: project.project_link,
+                    image: project.image_path,
+                    description: project.description,
+                    github_link: project.github_link
+                    }) %>
+    <% end %>
+  </div>
+  <%= partial(:footer) %>
+</div>
