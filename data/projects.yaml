@@ -3,7 +3,7 @@ details:
     image_path   :
       name: "instapulse.png"
       css :
-    description  :  "234<em>InstaPulse</em> is a mapping app that allows you to discover trends via Instagram photos over time and space in San Francisco."
+    description  :  "<em>InstaPulse</em> is a mapping app that allows you to discover trends via Instagram photos over time and space in San Francisco."
     github_link  :
       link :  "https://github.com/gopher-snakes-2013/Instapulse"
       text :  "[ Code on Github ]"
