@@ -12,17 +12,36 @@
     <%= javascript_include_tag "all" %>
   </head>
   <body>
-    <nav class="top-bar row" data-topbar role="navigation">
-        <!-- <h1>Ryan Hedges</h1> -->
+    <div class="contain-to-grid">
+
+      <nav class="top-bar" data-topbar role="navigation">
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="#">Ryan Hedges</a></h1>
+            <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+          </li>
+        </ul>
         <section class="top-bar-section">
           <ul class="right">
-            <li><a href="#" title="">blog</a></li>
+            <li class="active"><a href="#" title="">blog</a></li>
             <li><a href="#" title="">about</a></li>
             <li><a href="#" title="">projects</a></li>
             <li><a href="#" title="">contact</a></li>
+            <li class="has-form">
+              <div class="row collapse">
+                <div class="large-8 small-9 columns">
+                  <input type="text" placeholder="Find Stuff">
+                </div>
+                <div class="large-4 small-3 columns">
+                  <a href="#" class="alert button expand">Search</a>
+                </div>
+              </div>
+            </li>
           </ul>
         </section>
-    </nav>
+      </nav>
+
+    </div>
 
     <div class="row" id="main" role="main">
       <div class="large-9 columns">
