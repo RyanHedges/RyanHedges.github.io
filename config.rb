@@ -38,6 +38,7 @@ page "/feed.xml", layout: false
 ###
 
 # Change Compass configuration
+# This makes it possible to have foundation included properly.
 compass_config do |config|
   config.add_import_path "bower_components/foundation/scss"
   config.output_style = :compact
