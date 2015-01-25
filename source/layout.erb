@@ -13,11 +13,10 @@
   </head>
   <body>
 
-    <div>
-      <%= partial 'shared/topbar_navigation' %>
-    </div>
 
     <div class="row main-body" id="main" role="main">
+        <%= partial 'shared/topbar_navigation' %>
+
       <div class="small-12 large-9 columns">
         <%= yield %>
       </div>
