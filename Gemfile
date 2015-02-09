@@ -20,3 +20,6 @@ gem "tzinfo-data", platforms: [:mswin, :mingw]
 
 # helps deploy to master branch
 gem 'middleman-deploy', '~> 0.3.0'
+
+gem 'bootstrap-sass', '~> 3.2', require: false
+
