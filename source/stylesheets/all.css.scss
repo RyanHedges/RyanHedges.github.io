@@ -1,3 +1,6 @@
-@import "app.scss";
+@import url(http://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic);
+
+@import "bootstrap_override.scss";
 @import "bootstrap";
+@import "app.scss";
 

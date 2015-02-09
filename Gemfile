@@ -22,4 +22,5 @@ gem "tzinfo-data", platforms: [:mswin, :mingw]
 gem 'middleman-deploy', '~> 0.3.0'
 
 gem 'bootstrap-sass', '~> 3.2', require: false
+gem "jquery-middleman", '~> 3.0'
 
