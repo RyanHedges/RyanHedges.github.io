@@ -1,4 +1,28 @@
-$brand-primary: red;
+// http://getbootstrap.com/customize/#less-variables
+// List of variables available for overwriting @ = $ in scss
+
+  // Colors //
+$brand-primary: rgb(114, 145, 139);
+$brand-secondary: rgb(159, 176, 62);
+$gray-base: rgb(83, 87, 74);
+
+  // Scaffolding //
+$body-bg: rgb(254, 255, 255);
+$link-hover-decoration: none;
+
+  // Typography //
 $font-family-serif: "Noto Serif", Georgia, "Times New Roman", Times, serif;
 $font-family-base: $font-family-serif;
+
+  // Components //
+$border-radius-base: 1px;
+
+  // Navbar //
+$navbar-height: 35px;
+$navbar-default-bg: $body-bg;
+$navbar-default-border: none;
+$navbar-default-link-hover-color: $body-bg;
+
+  // Nav //
+$nav-link-hover-bg: $gray-base;
 
