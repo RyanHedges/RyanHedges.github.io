@@ -24,15 +24,20 @@ activate :blog do |blog|
   blog.calendar_template = "calendar.html"
 
   # Enable pagination
-  # blog.paginate = true
-  # blog.per_page = 10
-  # blog.page_link = "page/{num}"
+  blog.paginate = true
+  blog.per_page = 7
+  blog.page_link = "page-{num}"
 end
 
 activate :directory_indexes
 
 page "/feed.xml", layout: false
 
+# Middleman Syntax Gem
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
+
+activate :syntax
 ###
 # Compass
 ###

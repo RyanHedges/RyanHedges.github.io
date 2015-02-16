@@ -8,12 +8,14 @@ $gray-base: rgb(83, 87, 74);
 
   // Scaffolding //
 $body-bg: rgb(254, 255, 255);
+$body-bg-secondary: rgb(235, 233, 224);
 $link-hover-decoration: none;
 
   // Typography //
 $font-family-serif: "Noto Serif", Georgia, "Times New Roman", Times, serif;
 $font-family-base: $font-family-serif;
 $font-size-base: 16px;
+$line-height-base: 1.75;
 
   // Components //
 $border-radius-base: 0px;
