@@ -1,20 +1,2 @@
-.nav li a {
-  color: $brand-secondary;
-  &:hover {
-    color: $body-bg;
-  }
-}
-
-// style tablet and larger //
-
-@media (min-width: $screen-sm-min) {
-  .nav {
-    li a {
-        border-left: 1px solid $gray-lighter;
-      }
-    li:last-child a {
-      border-right: 1px solid $gray-lighter;
-    }
-  }
-}
+@import 'components/navbar.scss'
 

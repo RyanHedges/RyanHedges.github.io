@@ -13,16 +13,18 @@ $link-hover-decoration: none;
   // Typography //
 $font-family-serif: "Noto Serif", Georgia, "Times New Roman", Times, serif;
 $font-family-base: $font-family-serif;
+$font-size-base: 16px;
 
   // Components //
-$border-radius-base: 1px;
+$border-radius-base: 0px;
 
   // Navbar //
 $navbar-height: 35px;
+$navbar-margin-bottom: 0px;
 $navbar-default-bg: $body-bg;
 $navbar-default-border: none;
 $navbar-default-link-hover-color: $body-bg;
-
+$navbar-default-link-active-bg: orange;
   // Nav //
 $nav-link-hover-bg: $gray-base;
 

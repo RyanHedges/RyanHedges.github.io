@@ -1,0 +1,43 @@
+.navbar {
+  margin-top: 1rem;
+}
+
+.nav li a {
+  color: $brand-secondary;
+}
+
+.navbar-default .brand-style {
+  color: rgb(134, 148, 52);
+  font-size: 2rem;
+  text-align: center;
+  &:hover {
+    color: $brand-primary;
+  }
+}
+
+// style tablet and smaller //
+
+@media (max-width: $screen-sm-min) {
+  .nav-justified li {
+    float: left;
+    width: 50%;
+  }
+}
+
+// style tablet and larger //
+
+@media (min-width: $screen-sm-min) {
+  .nav {
+    li a {
+        border-left: 1px solid $gray-lighter;
+      }
+    li:last-child a {
+      // border-right: 1px solid $gray-lighter;
+    }
+  }
+  
+  .navbar-default .brand-style {
+    margin: 0 3rem 0 0;
+  }
+}
+
