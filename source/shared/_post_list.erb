@@ -1,6 +1,6 @@
 ---
 pageable: true
-per_page: 10
+per_page: 7
 ---
 <% if paginate && num_pages > 1 %>
   <p>page <%= page_number %> of <%= num_pages %></p>
@@ -11,10 +11,24 @@ per_page: 10
 <% end %>
 
 <% page_articles.each_with_index do |article, i| %>
-  <h2><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h2>
-  <!-- use article.summary(250) if you have nokogiri available to show just
-       the first 250 characters -->
-  <%= article.body %>
+  <article data-file-path=<%= article.destination_path %> data-target-element="article" >
+    <h2 class="article-link"><%= link_to article.title, article %></h2>
+    <p>
+      <span class="h4"><%= article.date.strftime('%A %B %e, %Y') %></span>
+      <span class="eta"></span>
+      <span>
+        <% article.tags.each do |tag| %>
+          <%= tag_link(article, tag) %>
+        <% end %>
+      </span>
+    </p>
+    <p class="">
+
+    </p>
+  <!-- use article.summary(250) if you have nokogiri available to show just the first 250 characters --> 
+    <%= article.summary %>
+    <%= link_to 'Keep reading...', article %>
+  </article>
 <% end %>
 
 <% if paginate %>
