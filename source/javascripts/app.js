@@ -12,3 +12,12 @@ $(function() {
   });
 
 });
+
+function addColumnsForArticleSummary(){
+  $( '.article-summary' ).children().addClass("col-xs-12");
+};
+
+
+$( document ).ready(function() {
+  addColumnsForArticleSummary()
+});

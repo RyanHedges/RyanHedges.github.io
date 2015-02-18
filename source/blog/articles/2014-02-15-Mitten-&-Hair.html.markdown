@@ -2,6 +2,7 @@
 title: Mitten & Hair
 date: 2014-02-15
 tags: Fulltest, HTML, Middleman
+pageable: true
 ---
 
 Single-origin coffee try-hard small batch, authentic Shoreditch hoodie VHS
