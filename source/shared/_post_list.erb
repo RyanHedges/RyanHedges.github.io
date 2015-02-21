@@ -2,14 +2,17 @@
 <% page_articles.each_with_index do |article, i| %>
   <article class="row" data-file-path=<%= article.destination_path %> data-target-element="article" >
     <h2 class="col-xs-12 article-link"><%= link_to article.title, article %></h2>
+
     <time class="col-xs-12 col-sm-7"><%= article.date.strftime('%A %B %e, %Y') %></time>
     <span class="eta col-sm-5"></span>
-    <span class="col-xs-12">
-      <% article.tags.each do |tag| %>
-        <%= tag_link(article, tag) %>
-      <% end %>
+
+    <span class="col-xs-12" aria-label="Tags">
+      <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
+        <% article.tags.each do |tag| %>
+          <%= tag_link(article, tag) %>
+        <% end %>
     </span>
-  <!-- use article.summary(250) if you have nokogiri available to show just the first 250 characters --> 
+
     <div class="article-summary">
       <%= article.summary %>
       <%= link_to 'Keep reading...', article %>
