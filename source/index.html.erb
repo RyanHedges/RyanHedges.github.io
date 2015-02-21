@@ -1,5 +1,16 @@
+---
+pageable: true
+---
+
 <div class="col-md-8">
-  <%= partial 'shared/post_list' %>
+
+  <%= partial 'shared/post_list', :locals => { paginate: paginate,
+      num_pages: num_pages,
+      page_number: page_number,
+      prev_page: prev_page,
+      next_page: next_page,
+      page_articles: page_articles }
+  %>
 </div>
 
 <div class="col-md-4">
