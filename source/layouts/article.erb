@@ -1,6 +1,22 @@
 <% wrap_layout :layout do %>
-  <article>
+  <article class="col-sm-12 col-md-8 col-md-offset-2">
+    <div class="row">
+      <%= current_page.title %>
+      <span class="eta"></span>
+    </div>
     <%= yield %>
   </article>
+
+
+  <nav class="row">
+    <div class="col-xs-12">
+      <ul class="pager">
+        <li class="previous <%= pager_disabled(current_page.next_article)
+  %>"><%= link_to 'newer', current_page.next_article%> </li>
+        <li class="next <%= pager_disabled(current_page.previous_article) %>"><%= link_to 'older',
+  current_page.previous_article %> </li>
+      </ul>
+    </div>
+  </nav>
 <% end %>    
 
