@@ -272,7 +272,7 @@ Markdown | Less | Pretty
 *Still* | `renders` | **nicely**
 1 | 2 | 3
 
-<a name="blockquotes"/>
+<a name="blockquotes"></a>
 ## Blockquotes
 
 ```no-highlight
