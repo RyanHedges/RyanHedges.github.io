@@ -28,3 +28,5 @@ gem "jquery-middleman", "~> 3.0"
 gem "middleman-syntax", "~> 2.0"
 gem "redcarpet", "~>3.1"
 
+gem "middleman-favicon-maker", "~>3.7"
+
