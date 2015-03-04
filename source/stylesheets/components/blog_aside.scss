@@ -1,0 +1,19 @@
+#main-content aside {
+  .topic-tag { 
+    a {
+      color: $brand-secondary;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid $gray-light;
+      display: inline-block;
+      margin: 0.5rem 0.75rem 0.5rem 0;
+      font-size: 13px;
+      border-radius: 2px;
+      
+      &:hover {
+        color: $body-bg;
+        background-color: $gray-base;
+        text-decoration: none;
+      }
+    }
+  }
+}
