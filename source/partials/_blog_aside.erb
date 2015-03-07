@@ -1,22 +1,26 @@
 
 <aside class="row">
-  <div class="col-sm-12">
+  <div class="col-xs-12 col-sm-6 col-md-12 article-list">
     <h4>You might find these interesting</h4>
-    <ul>
-      <% blog.articles.sample(5).each do |article| %>
-      <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
-      <% end %>
+      <ul>
+        <% blog.articles.sample(5).each do |article| %>
+          <li>
+            <h5 class="title"><%= link_to article.title, article %></h5>
+            <p class="date"><%= article.date.strftime('%b. %e %Y') %></p>
+          </li>
+        <% end %>
+      </ul>
     </ul>
   </div>
 
-  <div class="col-sm-12 topic-tag">
+  <div class="col-xs-12 col-sm-6 col-md-12 topic-tag">
     <h4>Topics I'm thinking about</h4>
     <% blog.tags.each do |tag, articles| %>
       <%= link_to "#{tag} (#{articles.size})", tag_path(tag) %>
     <% end %>
   </div>
 
-  <div class="col-sm-12">
+  <div class="col-xs-12">
     <h2>By Year</h2>
     <ol>
       <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>

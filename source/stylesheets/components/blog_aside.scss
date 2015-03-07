@@ -1,4 +1,37 @@
 #main-content aside {
+  .article-list {
+    ul{
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-top: 2rem;
+        border-bottom: 1px solid $gray-lighter;
+        padding-bottom: 1rem;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+
+      .title {
+        height: 2rem;
+        width: 97%;
+        margin: 0;
+        padding-left: 1rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .date {
+        margin: 0;
+        color: $gray;
+        padding-left: 1rem;
+      }
+    }
+  }
+
   .topic-tag { 
     a {
       color: $brand-secondary;
