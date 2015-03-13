@@ -20,7 +20,7 @@
   </head>
   <body>
 
-    <div class="container" id="">
+    <div class="container" id="topbar-navigation">
       <div class="row">
         <%= partial 'partials/topbar_navigation' %>
       </div>
@@ -29,13 +29,9 @@
         <%= yield %>
       </div>
 
-      <footer class="row">
-        FOOTER
+      <footer class="row" id="footer">
+        <%= partial 'partials/footer_navigation' %>
       </footer>
     </div>
-
-
-
-
   </body>
 </html>
