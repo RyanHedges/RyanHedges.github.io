@@ -1,0 +1,46 @@
+// http://getbootstrap.com/customize/#less-variables
+// List of variables available for overwriting @ = $ in scss
+
+  // Colors //
+$brand-primary: rgb(114, 145, 139);
+$brand-secondary: rgb(159, 176, 62);
+$gray-base: rgb(83, 87, 74);
+$gray: lighten($gray-base, 33.5%);
+$gray-light: lighten($gray-base, 46.7%);
+$gray-lighter: lighten($gray-base, 60.5%);
+
+  // Scaffolding //
+$body-bg: rgb(254, 255, 255);
+$body-bg-secondary: rgb(235, 233, 224);
+$link-hover-decoration: none;
+
+  // Typography //
+$font-family-serif: "Noto Serif", Georgia, "Times New Roman", Times, serif;
+$font-family-base: $font-family-serif;
+$font-size-base: 16px;
+$line-height-base: 1.75;
+
+  // Components //
+$border-radius-base: 0px;
+
+  // Navbar //
+$navbar-height: 35px;
+$navbar-margin-bottom: 0px;
+$navbar-default-bg: $body-bg;
+$navbar-default-border: none;
+$navbar-default-link-hover-color: $body-bg;
+$navbar-default-link-active-bg: orange;
+
+  // Nav //
+$nav-link-hover-bg: $gray-base;
+
+  // Pagination //
+$pagination-bg: $body-bg;
+$pagination-border: $gray-lighter;
+$pagination-hover-bg: $gray-base;
+$pagination-hover-color: white;
+$pagination-disabled-color: $gray-lighter;
+
+  // Pager //
+$pager-border-radius: 0.25rem;
+

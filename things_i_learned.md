@@ -14,3 +14,8 @@ Partials go directly in the source dir and have underscore in front
 
 There are gems for middleman and then there are gems for middleman blog
   that middleman init --template=blog gives you.
+
+------
+
+vim and iterms reload/refresh. turn it off in prefs -> keys
+

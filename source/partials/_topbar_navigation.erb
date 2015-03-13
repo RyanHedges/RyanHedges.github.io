@@ -1,0 +1,20 @@
+<nav class="navbar navbar-default">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+    data-target="#navbar-collapse-links">
+      <span class="sr-only">Toggle navigation</span>
+      <span >menu</span>
+    </button>
+    <%= link_to 'Ryan Hedges', '/index.html', :class => 'navbar-brand
+brand-style' %>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse-links">
+    <ul class="nav nav-justified">
+      <li class="active"><%= link_to 'blog', '/index.html', :class => 'active' %></li>
+      <li class=""><%= link_to 'about', '/about.html' %></li>
+      <li class=""><%= link_to 'projects', '/projects.html' %></li>
+      <li class=""><%= link_to 'contact', '/contact.html' %></li>
+    </ul>
+  </div>
+</nav>
+

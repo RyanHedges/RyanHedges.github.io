@@ -1,0 +1,30 @@
+<% wrap_layout :layout do %>
+  <article class="col-sm-12 col-md-8 col-md-offset-2">
+    <div class="row">
+      <h1 class="col-xs-12 text-center">
+        <%= current_page.title %>
+      </h1>
+      <time class="col-xs-12 text-center"><%= current_page.date.strftime('%A %B %e, %Y') %></time>
+      <p class="eta col-xs-12 text-center"></p>
+    </div>
+
+    <%= yield %>
+
+    <p class="col-xs-12 text-center closing-tag-list" aria-label="Tags">
+      <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
+      <% current_page.tags.each do |tag| %>
+        <%= tag_link(current_page, tag) %>
+      <% end %>
+    </p>
+  </article>
+
+  <nav class="col-xs-10 col-xs-offset-1">
+    <ul class="pager">
+      <li class="previous <%= pager_disabled(current_page.next_article)
+%>"><%= link_to 'newer', current_page.next_article%> </li>
+      <li class="next <%= pager_disabled(current_page.previous_article) %>"><%= link_to 'older',
+current_page.previous_article %> </li>
+    </ul>
+  </nav>
+<% end %>    
+

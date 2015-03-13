@@ -1,0 +1,14 @@
+.article-link a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.article-summary {
+  margin: 1rem 0;
+}
+
+.glyphicon-tags {
+  margin: 0 .50rem 0 .25rem;
+  color: $gray-base;
+}
