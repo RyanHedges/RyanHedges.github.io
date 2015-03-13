@@ -1,5 +1,7 @@
 #main-content aside {
   .article-list {
+    margin-top: 2.7rem;
+
     ul{
       list-style: none;
       padding: 0;
@@ -47,6 +49,12 @@
         background-color: $gray-base;
         text-decoration: none;
       }
+    }
+  }
+
+  @media (max-width: $screen-sm-max) {
+    .article-list {
+      margin-top: 0;
     }
   }
 }
