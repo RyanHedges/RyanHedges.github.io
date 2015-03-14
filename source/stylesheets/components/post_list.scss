@@ -1,14 +1,20 @@
-.article-link a {
-  &:hover {
-    text-decoration: none;
+article {
+  .article-link a {
+    &:hover {
+      text-decoration: none;
+    }
   }
-}
 
-.article-summary {
-  margin: 1rem 0;
-}
+  .article-summary {
+    margin: 1rem 0;
+  }
 
-.glyphicon-tags {
-  margin: 0 .50rem 0 .25rem;
-  color: $gray-base;
+  .glyphicon-tags {
+    margin: 0 .50rem 0 .25rem;
+    color: $gray-base;
+  }
+
+  .tags {
+    margin-bottom: 1rem;
+  }
 }

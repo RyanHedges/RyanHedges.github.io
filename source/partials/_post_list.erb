@@ -6,7 +6,7 @@
     <time class="col-xs-12 col-sm-7"><%= article.date.strftime('%A %B %e, %Y') %></time>
     <span class="eta col-sm-5"></span>
 
-    <span class="col-xs-12" aria-label="Tags">
+    <span class="col-xs-12 tags" aria-label="Tags">
       <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
         <% article.tags.each do |tag| %>
           <%= tag_link(article, tag) %>
