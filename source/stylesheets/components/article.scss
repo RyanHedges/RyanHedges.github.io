@@ -14,3 +14,20 @@
     }
   }
 }
+
+// style smallest screen //
+
+@media (max-width: $screen-sm-min) {
+  .article-pager .pager {
+    margin: 0;
+
+    .previous a {
+      margin-bottom: 1rem;
+    }
+
+    a {
+      float: none;
+      display: block;
+    }
+  }
+}
