@@ -26,8 +26,9 @@ details:
   - project_link :  "https://twitter.com/millpondfilms"
     image_path   :
       name:  "Millpond.png"
-      css : "style='border:1px solid #474747'"
+      css : "style='border:1px solid #53574A'"
     description  :  "<em>Millpond Films</em> logo design</p>"
     github_link  :
       link :
       text :
+
