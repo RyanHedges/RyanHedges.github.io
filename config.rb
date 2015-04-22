@@ -31,6 +31,7 @@ activate :blog do |blog|
   blog.page_link = "page-{num}"
 end
 
+set :partials_dir, "/partials"
 
 page "/feed.xml", layout: false
 
