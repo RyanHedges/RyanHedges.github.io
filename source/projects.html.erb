@@ -1,0 +1,14 @@
+<h2 class="text-center"> Projects </h2>
+<div class="row project-item">
+  <% data.projects.details.each do |project| %>
+    <%= partial(:portfolio_item, 
+          :locals => {
+            project_link: project.project_link,
+            image: project.image_path,
+            description: project.description,
+            github_link: project.github_link
+          })
+    %>
+  <% end %>
+</div>
+
