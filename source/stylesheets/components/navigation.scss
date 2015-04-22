@@ -20,6 +20,13 @@
 }
 
 .pager {
+  .disabled a {
+      cursor: default;
+    &:hover {
+      cursor: default;
+    }
+  }
+
   a {
     color: $brand-secondary;
     &:hover {

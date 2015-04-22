@@ -1,3 +1,35 @@
 .closing-tag-list {
   margin-top: 2rem;
 }
+
+.article-pager .pager {
+  a {
+    border: 0;
+    color: $brand-secondary;
+    padding: 0;
+    max-width: 45%;
+
+    &:hover {
+      background-color: $body-bg;
+      color: darken($brand-secondary, 15%);
+    }
+  }
+}
+
+// style smallest screen //
+
+@media (max-width: $screen-sm-min) {
+  .article-pager .pager {
+    margin: 0;
+
+    .previous a {
+      margin-bottom: 1rem;
+    }
+
+    a {
+      float: none;
+      display: block;
+      max-width: none;
+    }
+  }
+}

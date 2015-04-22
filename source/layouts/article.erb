@@ -1,5 +1,5 @@
 <% wrap_layout :layout do %>
-  <article class="col-sm-12 col-md-8 col-md-offset-2">
+  <article class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
     <div class="row">
       <h1 class="col-xs-12 text-center">
         <%= current_page.title %>
@@ -18,12 +18,19 @@
     </p>
   </article>
 
-  <nav class="col-xs-10 col-xs-offset-1">
+  <nav class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 article-pager">
     <ul class="pager">
-      <li class="previous <%= pager_disabled(current_page.next_article)
-%>"><%= link_to 'newer', current_page.next_article%> </li>
-      <li class="next <%= pager_disabled(current_page.previous_article) %>"><%= link_to 'older',
-current_page.previous_article %> </li>
+      <% if current_page.next_article %>
+        <li class="previous  <%= pager_disabled(current_page.next_article) %>">
+          <%= link_to current_page.next_article.title, current_page.next_article %>
+        </li>
+      <% end %>
+
+      <% if current_page.previous_article %>
+        <li class="next <%= pager_disabled(current_page.previous_article) %>">
+          <%= link_to current_page.previous_article.title, current_page.previous_article %>
+        </li>
+      <% end %>
     </ul>
   </nav>
 <% end %>    
