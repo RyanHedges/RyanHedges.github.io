@@ -17,7 +17,11 @@ function addColumnsForArticleSummary(){
   $( '.article-summary' ).children().addClass("col-xs-12");
 };
 
+function underlineCurrentPage() {
+  $(".nav a.active").parent().addClass("underline");
+};
 
 $( document ).ready(function() {
-  addColumnsForArticleSummary()
+  addColumnsForArticleSummary();
+  underlineCurrentPage();
 });

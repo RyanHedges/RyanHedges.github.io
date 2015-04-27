@@ -35,6 +35,10 @@ set :partials_dir, "/partials"
 
 page "/feed.xml", layout: false
 
+page "/about.html", layout: "basic_page"
+page "/projects.html", layout: "basic_page"
+page "/contact.html", layout: "basic_page"
+
 # Middleman Syntax Gem
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true,

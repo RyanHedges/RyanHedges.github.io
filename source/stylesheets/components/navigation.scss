@@ -2,10 +2,22 @@
   margin-top: 1rem;
 }
 
-.nav li a {
-  color: $brand-secondary;
-  &:hover {
-    color: $body-bg;
+.nav {
+  li.underline {
+    border-bottom: 2px solid $brand-secondary
+  }
+
+  li {
+    a {
+      color: $brand-secondary;
+      &:hover {
+        color: $body-bg;
+      }
+
+      &.active {
+        margin-bottom: -2px;
+      }
+    }
   }
 }
 
