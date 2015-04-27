@@ -106,7 +106,7 @@ set :images_dir, 'images'
 activate :deploy do |deploy|
   deploy.method = :git
   deploy.branch = 'master'
-  deploy.commit_message = 'initial build for middleman conversion'
+  deploy.commit_message = 'New site released with dummy content'
 end
 
 # Build-specific configuration
