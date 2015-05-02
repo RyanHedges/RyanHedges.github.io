@@ -9,6 +9,7 @@ code itself.
 
 - Fix mobile navigation and footer alignment issues.
 - Correct favicon maker so every page displays favicon.
+- Remove extra crufty files from source and old website.
 
 #### 2.0.0
 
