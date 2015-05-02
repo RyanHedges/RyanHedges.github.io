@@ -11,6 +11,7 @@ code itself.
 - Correct favicon maker so every page displays favicon.
 - Remove extra crufty files from source and old website.
 - Style tags page for listing blog tags.
+- Add explanation to markdown blog post.
 
 #### 2.0.0
 
