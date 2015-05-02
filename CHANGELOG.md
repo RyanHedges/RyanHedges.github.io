@@ -7,6 +7,8 @@ code itself.
 
 #### Next Release
 
+- Fix mobile navigation and footer alignment issues.
+
 #### 2.0.0
 
 - Release new version of the website with dummy blog posts.
