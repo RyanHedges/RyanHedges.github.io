@@ -1,8 +1,22 @@
 ---
 title: Markdown Cheatsheet
-date: 2014-02-20
-tags: Markdown, fulltest, Middleman
+date: 2015-05-01
+tags: Markdown, Cheatsheet, Middleman
 ---
+
+This is a Markdown cheatsheet that I pulled from [this github
+page](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) in
+order to help me understand and visually see how my blog will render Markdown.
+I'm used to the Github-flavored markdown in most of my repositories so this
+post helped me discover what my blog was rendering markdown. I accomplished
+most of this by using the [redcarpet gem](https://github.com/vmg/redcarpet)
+and configuring it in my
+[config.rb](https://github.com/RyanHedges/RyanHedges.github.io/blob/source/config.rb#L40).
+As my blog grows and changes over time I will use this post as a reference and
+a regression test that my site is still functioning properly. Feel free to use
+this as a reference to see what my blog is currently capable of.
+
+READMORE
 
 This is intended as a quick reference and showcase. For more complete info, see [John Gruber's original spec](http://daringfireball.net/projects/markdown/) and the [Github-flavored Markdown info page](http://github.github.com/github-flavored-markdown/).
 
