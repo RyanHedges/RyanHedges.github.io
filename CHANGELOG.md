@@ -8,6 +8,7 @@ code itself.
 #### Next Release
 
 - Fix mobile navigation and footer alignment issues.
+- Correct favicon maker so every page displays favicon.
 
 #### 2.0.0
 
