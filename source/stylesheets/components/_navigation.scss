@@ -3,19 +3,20 @@
 }
 
 .nav {
-  li.underline {
+  li.underline a {
     border-bottom: 2px solid $brand-secondary
   }
 
   li {
     a {
       color: $brand-secondary;
+      margin-bottom: 0;
       &:hover {
         color: $body-bg;
       }
 
       &.active {
-        margin-bottom: 3px;
+        padding-bottom: 8px;
       }
     }
   }
