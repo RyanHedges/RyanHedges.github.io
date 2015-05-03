@@ -7,6 +7,10 @@ code itself.
 
 #### Next Release
 
+- Add resume to about page.
+
+#### 2.0.1
+
 - Fix mobile navigation and footer alignment issues.
 - Correct favicon maker so every page displays favicon.
 - Remove extra crufty files from source and old website.
