@@ -7,6 +7,8 @@ code itself.
 
 #### Next Release
 
+#### 2.0.2
+
 - Add resume to about page.
 - Fix favicon build path error.
 
