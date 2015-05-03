@@ -3,6 +3,17 @@ RyanHedges.com
 
 This is a [middlemann](http://middlemanapp.com/, "Middleman - static site generator") website that compiles into static web pages to be hosted on [github pages](https://pages.github.com/).
 
+## Ideas of things to write about
+
+- `let` in rspec
+- Interesting things I learned while making this blog
+- Describing proper commit messages.
+- Rspec vs Jasmin testing (how to do same thing in both).
+- BOOK CLUB - write about a chapter from a book that I like - Reference the
+  Book & Author.
+- pair programming.
+- interview process.
+
 ## Some tips for doing something similar yourself.
 
 #### Building to master branch
