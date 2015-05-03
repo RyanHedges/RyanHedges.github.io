@@ -102,7 +102,7 @@ set :images_dir, 'images'
 activate :deploy do |deploy|
   deploy.method = :git
   deploy.branch = 'master'
-  deploy.commit_message = '2.0.1 release with bug fixes'
+  deploy.commit_message = '2.0.2 trying to get favicon deployed correctly'
 end
 
 # Build-specific configuration
@@ -112,7 +112,7 @@ configure :build do
 
   activate :favicon_maker do |f|
     f.template_dir = File.join(root, 'source')
-    f.output_dir = File.join(root, 'build', 'images', 'favicon')
+    f.output_dir = File.join(root, 'build', 'images')
     f.icons = {
       "_favicon_template.png" => [
         { icon: "apple-touch-icon-152x152-precomposed.png" },
