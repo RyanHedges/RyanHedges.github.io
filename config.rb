@@ -102,7 +102,7 @@ set :images_dir, 'images'
 activate :deploy do |deploy|
   deploy.method = :git
   deploy.branch = 'master'
-  deploy.commit_message = 'New site released with dummy content'
+  deploy.commit_message = '2.0.1 release with bug fixes'
 end
 
 # Build-specific configuration
