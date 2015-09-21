@@ -7,6 +7,10 @@ code itself.
 
 #### Next Release
 
+#### 2.0.3
+
+- Add Vim cheat sheet article
+
 #### 2.0.2
 
 - Add resume to about page.

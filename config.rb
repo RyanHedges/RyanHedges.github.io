@@ -102,7 +102,7 @@ set :images_dir, 'images'
 activate :deploy do |deploy|
   deploy.method = :git
   deploy.branch = 'master'
-  deploy.commit_message = '2.0.2 trying to get favicon deployed correctly'
+  deploy.commit_message = '2.0.3 Publish Vim cheatsheet article'
 end
 
 # Build-specific configuration
