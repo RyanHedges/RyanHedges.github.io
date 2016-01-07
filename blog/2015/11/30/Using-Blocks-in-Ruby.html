@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/apple-touch-icon-152x152-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png" />
+    <link rel="shortcut icon" href="/images/favicon.png" />
+    <link rel="icon" type="image/ico" href="/images/favicon.ico" />
+<title>Ryan Hedges - Using Blocks in Ruby</title>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/blog/feed.xml" />
+    <link href="/stylesheets/all.css" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+  <body>
+
+    <div class="container" id="topbar-navigation">
+      <div class="row">
+        <nav class="navbar navbar-default">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+    data-target="#navbar-collapse-links">
+      <span class="sr-only">Toggle navigation</span>
+      <span >menu</span>
+    </button>
+    <a class="navbar-brand
+brand-style" href="/">Ryan Hedges</a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse-links">
+    <ul class="nav nav-justified">
+      <li ><a class="" href="/">blog</a></li>
+      <li ><a class="" href="/about/">about</a></li>
+      <li ><a class="" href="/projects/">projects</a></li>
+      <li ><a class="" href="/contact/">contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+      </div>
+
+      <div class="row" id="main-content">
+          <article class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+    <div class="row">
+      <h1 class="col-xs-12 text-center">
+        Using Blocks in Ruby
+      </h1>
+      <time class="col-xs-12 text-center">Monday November 30, 2015</time>
+      <p class="eta col-xs-12 text-center"></p>
+    </div>
+
+    <p>Today I was fortunate enough to be able to spend some time learning about the
+intricacies of blocks in Ruby. I am hoping to ramp up from basic to more
+complex ideas around blocks in this post so that all skill levels can benefit.</p>
+
+<p>Blocks at first seem to be rather magical, and as a result, can be
+intimidating to dive into. So take a deep breath if you are feeling similar
+right now and believe that you will learn something new about blocks!</p>
+
+<p>So if this is your first dive into blocks let&rsquo;s point one out.</p>
+<pre><code class="highlight ruby"><span class="o">[</span><span class="s2">"Mon"</span><span class="p">,</span> <span class="s2">"Tues"</span><span class="p">,</span> <span class="s2">"Wednes"</span><span class="o">]</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">prefix</span><span class="o">|</span> 
+  <span class="nb">puts</span> <span class="s2">"</span><span class="si">#{</span><span class="n">prefix</span><span class="si">}</span><span class="s2">day"</span>
+<span class="k">end</span>
+</code></pre>
+
+<p>The block in this chunk of code starts with <code>do</code> and ends with <code>end</code>. You&rsquo;ve
+likely seen this with curly braces as well (<code>{ |prefix| puts &quot;#{prefix}day&quot; }</code>).
+What&rsquo;s happening is that each item in the array is being passed into the block
+and the code inside is being executed. Let&rsquo;s make up our own method to see how we
+would create and use our own block.</p>
+<pre><code class="highlight ruby"><span class="k">def</span> <span class="nf">add_day</span>
+  <span class="k">yield</span> <span class="s2">"day"</span>
+<span class="k">end</span>
+
+<span class="n">add_day</span> <span class="p">{</span> <span class="o">|</span><span class="n">word</span><span class="o">|</span> <span class="nb">puts</span> <span class="s2">"Mon</span><span class="si">#{</span><span class="n">word</span><span class="si">}</span><span class="s2">"</span> <span class="p">}</span>
+<span class="n">add_day</span> <span class="p">{</span> <span class="o">|</span><span class="n">word</span><span class="o">|</span> <span class="nb">puts</span> <span class="s2">"What a wonderful </span><span class="si">#{</span><span class="n">word</span><span class="si">}</span><span class="s2">"</span> <span class="p">}</span>
+</code></pre>
+
+<p>So there are a couple of wonderful things here. First is the keyword <code>yield</code>.
+This keyword knows that an implicit block will be created and that it needs to
+give whatever it&rsquo;s provided to that block. In the above example we <code>yield</code> the
+string <code>&quot;day&quot;</code> to the block and use it to <code>puts</code> <code>&quot;Monday&quot;</code> for example.
+Second is the term &ldquo;implicit block&rdquo;. To better understand implicit, let&rsquo;s look
+at the same example using an explicit block.</p>
+<pre><code class="highlight ruby"><span class="k">def</span> <span class="nf">add_day</span> <span class="o">&amp;</span><span class="n">block</span>
+  <span class="n">block</span><span class="p">.</span><span class="nf">call</span> <span class="s2">"day"</span>
+<span class="k">end</span>
+
+<span class="n">add_day</span> <span class="p">{</span> <span class="o">|</span><span class="n">word</span><span class="o">|</span> <span class="nb">puts</span> <span class="s2">"Mon</span><span class="si">#{</span><span class="n">word</span><span class="si">}</span><span class="s2">"</span> <span class="p">}</span>
+<span class="n">add_day</span> <span class="p">{</span> <span class="o">|</span><span class="n">word</span><span class="o">|</span> <span class="nb">puts</span> <span class="s2">"What a wonderful </span><span class="si">#{</span><span class="n">word</span><span class="si">}</span><span class="s2">"</span> <span class="p">}</span>
+</code></pre>
+
+<p>When ran, this produces the same result. The difference is that when you use
+the explicit <code>&amp;block</code> syntax, a <code>Proc</code> object is being created for you so that
+it will be able to respond to the <code>call</code> method with the argument <code>&quot;day&quot;</code>.
+Some people will want you to understand this because there are performance
+trade-offs when using explicit or implicit blocks.</p>
+
+<p>Let&rsquo;s move towards something a little more real world. Perhaps we
+have a need to take a collection of numbers and we wanted to be able to do
+work on only those odd numbers. We don&rsquo;t know what the work would be, we just
+want that work to only be with odd numbers values. We could write the following method
+to help us out.</p>
+<pre><code class="highlight ruby"><span class="k">class</span> <span class="nc">Array</span>
+  <span class="k">def</span> <span class="nf">each_odd_number</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">value</span><span class="o">|</span>
+      <span class="k">if</span> <span class="n">value</span><span class="p">.</span><span class="nf">respond_to?</span><span class="p">(</span><span class="ss">:odd?</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">value</span><span class="p">.</span><span class="nf">odd?</span>
+        <span class="k">yield</span> <span class="n">value</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+    <span class="k">return</span> <span class="nb">self</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="o">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="s2">"foo"</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="s2">"bar"</span><span class="o">]</span><span class="p">.</span><span class="nf">each_odd_number</span> <span class="k">do</span> <span class="o">|</span><span class="n">odd_number</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="n">odd_number</span>
+<span class="k">end</span>
+</code></pre>
+
+<p>We define the <code>each_odd_number</code> in the <code>Array</code> class so that every instance of
+<code>Array</code> can now call it. We can make the logic as complex as we need it to be
+and can use blocks to create new logic using the method. You can also see that
+we call <code>return self</code> at the end of the method. we haven&rsquo;t made the
+method &ldquo;destructive&rdquo; and it&rsquo;s common convention to return the original array
+when it&rsquo;s not. If we didn&rsquo;t do this we would have <code>nil</code> returned.  Let&rsquo;s see
+the same thing using the explicit block again.</p>
+<pre><code class="highlight ruby"><span class="k">class</span> <span class="nc">Array</span>
+  <span class="k">def</span> <span class="nf">each_odd_number</span> <span class="o">&amp;</span><span class="n">some_block</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">value</span><span class="o">|</span>
+      <span class="k">if</span> <span class="n">value</span><span class="p">.</span><span class="nf">respond_to?</span><span class="p">(</span><span class="ss">:odd?</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">value</span><span class="p">.</span><span class="nf">odd?</span>
+        <span class="n">some_block</span><span class="p">.</span><span class="nf">call</span> <span class="n">value</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+    <span class="k">return</span> <span class="nb">self</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="o">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="s2">"foo"</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="s2">"bar"</span><span class="o">]</span><span class="p">.</span><span class="nf">each_odd_number</span> <span class="k">do</span> <span class="o">|</span><span class="n">odd_number</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="n">odd_number</span>
+<span class="k">end</span>
+</code></pre>
+
+<p>Notice how I use <code>&amp;some_block</code> as an argument for the method? It&rsquo;s common to
+see this as <code>&amp;block</code> or sometimes as <code>&amp;b</code> in some projects, but it&rsquo;s really
+just a name to identify the <code>Proc</code> object that&rsquo;s being created and it can be
+whatever you want it to be. Other than that, it&rsquo;s identical to the implicit
+syntax. Cool right!?</p>
+
+<p>Let&rsquo;s keep going!</p>
+
+<p>What if we didn&rsquo;t want that block to run right away? What if we want it to be
+&ldquo;saved&rdquo; so we can call it again and again whenever we want? We can use
+instance variables to save it and call the block whenever we want.</p>
+<pre><code class="highlight ruby"><span class="k">class</span> <span class="nc">Robot</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">load_speech</span> <span class="o">&amp;</span><span class="n">block</span>
+    <span class="vi">@speech</span> <span class="o">=</span> <span class="n">block</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+
+<p>We would then call <code>load_speech</code> like this</p>
+<pre><code class="highlight ruby"><span class="no">Robot</span><span class="p">.</span><span class="nf">load_speech</span> <span class="k">do</span>
+  <span class="c1">#whatever you want could go into here</span>
+  <span class="nb">puts</span> <span class="s2">"Greetings."</span>
+  <span class="nb">puts</span> <span class="s2">"You can call me Chip"</span>
+<span class="k">end</span>
+</code></pre>
+
+<p>We now have the speech saved to the <code>Robot</code> singleton. Every time we call
+<code>load_speech</code> and give it a block, it changes what the <code>@speech</code> variable is.</p>
+
+<p>Let&rsquo;s create a way for the given block to be executed with a <code>give_speech</code>
+class method.</p>
+<pre><code class="highlight ruby"><span class="k">class</span> <span class="nc">Robot</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">load_speech</span> <span class="o">&amp;</span><span class="n">block</span>
+    <span class="vi">@speech</span> <span class="o">=</span> <span class="n">block</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">give_speech</span>
+    <span class="vi">@speech</span><span class="p">.</span><span class="nf">call</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+
+<p>Then when we call <code>Robot.give_speech</code> the block given to <code>load_speech</code> is
+executed!</p>
+
+<p>This is the beginnings of a new DSL for interacting with the Robot object.
+It&rsquo;s basic but hopefully you are beginning to imagine some of the ways that
+blocks can be used.</p>
+
+<p>When I saw this I started wondering about some of the other ways I&rsquo;ve seen
+blocks implemented in ruby projects. Let&rsquo;s configure the robot before we start
+interacting with it this time around. We will start be defining the DSL that
+we want to be able to use to configure our <code>Robot</code>. After, we will define how
+we want to interact with our robot object and those configurations.</p>
+<pre><code class="highlight ruby"><span class="no">Robot</span><span class="p">.</span><span class="nf">configure</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+  <span class="n">config</span><span class="p">.</span><span class="nf">name</span> <span class="o">=</span> <span class="s2">"Chip"</span>
+  <span class="n">config</span><span class="p">.</span><span class="nf">set_greeting</span> <span class="k">do</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span>
+    <span class="nb">puts</span> <span class="s2">"Greetings."</span>
+    <span class="nb">puts</span> <span class="s2">"you can call me </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">."</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="no">Robot</span><span class="p">.</span><span class="nf">name</span>
+<span class="no">Robot</span><span class="p">.</span><span class="nf">say_greeting</span>
+</code></pre>
+
+<p>So in looking at this code we want to be able to configure what the name of
+the robot is and how to create a greeting for the robot. Let&rsquo;s see how we
+could implement this.</p>
+<pre><code class="highlight ruby"><span class="k">class</span> <span class="nc">Robot</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">configure</span>
+    <span class="k">yield</span> <span class="n">config</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">config</span>
+    <span class="vi">@config</span> <span class="o">||=</span> <span class="no">RobotConfig</span><span class="p">.</span><span class="nf">new</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">RobotConfig</span>
+  <span class="k">def</span> <span class="nf">name</span><span class="o">=</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+    <span class="vi">@name</span> <span class="o">=</span> <span class="nb">name</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">set_greeting</span> <span class="o">&amp;</span><span class="n">block</span>
+    <span class="vi">@greeting</span> <span class="o">=</span> <span class="n">block</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+
+<p>Here we created an instance of <code>RobotConfig</code> that we memoize when the <code>config</code>
+method is called. That object is yielded implicitly when <code>Robot.configure</code> is
+called with a block. The <code>RobotConfig</code> object has a setter method for name and
+a <code>set_greeting</code> method that stores a <code>Proc</code> in <code>@greeting</code>.</p>
+
+<p>Next we want to start describing the <code>name</code> and <code>say_greeting</code> methods.</p>
+<pre><code class="highlight ruby"><span class="k">class</span> <span class="nc">Robot</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">configure</span>
+    <span class="k">yield</span> <span class="n">config</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">config</span>
+    <span class="vi">@config</span> <span class="o">||=</span> <span class="no">RobotConfig</span><span class="p">.</span><span class="nf">new</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">name</span>
+    <span class="nb">puts</span> <span class="n">config</span><span class="p">.</span><span class="nf">name</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">say_greeting</span>
+    <span class="n">config</span><span class="p">.</span><span class="nf">greeting</span><span class="p">.</span><span class="nf">call</span> <span class="n">config</span><span class="p">.</span><span class="nf">name</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">RobotConfig</span>
+  <span class="kp">attr_accessor</span> <span class="ss">:name</span>
+
+  <span class="k">def</span> <span class="nf">set_greeting</span> <span class="o">&amp;</span><span class="n">block</span>
+    <span class="vi">@greeting</span> <span class="o">=</span> <span class="n">block</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">greeting</span>
+    <span class="vi">@greeting</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+
+<p>I updated the <code>name</code> method on the <code>RobotConfig</code> object to be an <code>attr_accessor</code> and then I am able to
+pass it into the <code>call</code> method inside <code>say_greeting</code> so that it
+is yielded correctly to the block that was defined in the <code>configure</code> method.</p>
+
+<p>Hopefully through these examples blocks will be less intimidating to work
+with. I found that as a learned more about how to use blocks, the less magical
+frameworks and gems became.</p>
+
+
+    <p class="col-xs-12 text-center closing-tag-list" aria-label="Tags">
+      <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
+        <a href="/blog/tags/ruby.html">Ruby,</a>
+        <a href="/blog/tags/blocks.html">Blocks,</a>
+        <a href="/blog/tags/dsl.html">DSL</a>
+    </p>
+  </article>
+
+  <nav class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 article-pager">
+    <ul class="pager">
+
+        <li class="next ">
+          <a href="/blog/2015/07/01/Vim-Cheatsheet.html">Vim Cheatsheet</a>
+        </li>
+    </ul>
+  </nav>
+
+      </div>
+
+      <footer class="row" id="footer">
+        <div class="col-xs-12 footer-links">
+  <ul class="col-md-10 col-md-offset-1">
+    <li class="col-xs-4 col-sm-2 col-sm-offset-1"><a class="active" href="/">blog</a></li>
+    <li class="col-xs-4 col-sm-2"><a href="/about/">about</a></li>
+    <li class="col-xs-4 col-sm-2"><a href="/projects/">projects</a></li>
+    <li class="col-xs-4 col-xs-offset-2 col-sm-2 col-sm-offset-0"><a href="/contact/">contact</a></li>
+    <li class="col-xs-4 col-sm-2"><a href="rhcvweb.pdf">resume</a></li>
+  </ul>
+</div>
+
+<div class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-0 footer-message">
+  <p>
+    Thanks for visiting! Please write me an email when you get a chance. <a href="mailto:ryan@ryanhedges.com">Ryan@ryanhedges.com</a>
+  </p>
+</div>
+
+
+      </footer>
+    </div>
+  </body>
+</html>
+
