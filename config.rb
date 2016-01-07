@@ -102,7 +102,7 @@ set :images_dir, 'images'
 activate :deploy do |deploy|
   deploy.method = :git
   deploy.branch = 'master'
-  deploy.commit_message = '2.0.3 Publish Vim cheatsheet article'
+  deploy.commit_message = '2.0.4 Publish ruby block article'
 end
 
 # Build-specific configuration

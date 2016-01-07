@@ -7,6 +7,10 @@ code itself.
 
 #### Next Release
 
+#### 2.0.4
+
+- Add Block article
+
 #### 2.0.3
 
 - Add Vim cheat sheet article
